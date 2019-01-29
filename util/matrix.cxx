@@ -6,7 +6,7 @@
 
 #include "stdint.h"
 
-#include "util/matrix.hxx"
+#include "matrix.hxx" //changed from "util/matrix.hxx"
 
 #include "vector_io.hxx"
 

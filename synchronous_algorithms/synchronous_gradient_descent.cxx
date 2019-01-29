@@ -2,7 +2,7 @@
 #include <vector>
 
 #define _USE_MATH_DEFINES
-#include <math.h>
+#include <cmath>
 
 #include "synchronous_algorithms/synchronous_gradient_descent.hxx"
 #include "synchronous_algorithms/gradient.hxx"
@@ -44,7 +44,7 @@ void synchronous_gradient_descent(vector<string> arguments, double (*objective_f
         try {
             line_search.line_search(point, current_fitness, gradient, new_point, current_fitness);
         } catch (LineSearchException *lse) {
-            cout << "\tLINE SEARCH EXCEPTION: " << *lse << endl;
+            //cout << "\tLINE SEARCH EXCEPTION: " << *lse << endl;
 
             if (lse->get_type() != LineSearchException::LOOP_2_OUT_OF_BOUNDS && lse->get_type() != LineSearchException::LOOP_3_OUT_OF_BOUNDS) {
                 delete lse;

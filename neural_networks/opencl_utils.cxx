@@ -4,7 +4,7 @@
 #include <CL/cl.h>
 #endif
 
-#include <math.h>
+#include <cmath>
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>

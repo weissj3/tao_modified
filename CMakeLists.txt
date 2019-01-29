@@ -5,7 +5,7 @@ set (TAO_VERSION_MAJOR 1)
 set (TAO_VERSION_MINOR 0)
  
 set(CMAKE_CXX_FLAGS "-g -Wall -O3 -funroll-loops -msse3")
-#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11") 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11") 
 
 #set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} /opt/local/lib)
 
@@ -27,13 +27,14 @@ find_package(OpenCL)
 message(STATUS "opencl libraries: ${OPENCL_LIBRARIES}")
 message(STATUS "opencl include_dirs: ${OPENCL_INCLUDE_DIRS}")
 
-add_subdirectory(neural_networks)
+#add_subdirectory(neural_networks)
 add_subdirectory(asynchronous_algorithms)
 add_subdirectory(synchronous_algorithms)
-add_subdirectory(clustering)
+#add_subdirectory(clustering)
 add_subdirectory(util)
-add_subdirectory(examples)
-add_subdirectory(mpi)
+#add_subdirectory(examples)
+#add_subdirectory(mpi)
+
 
 
 if (BOINC_SERVER_FOUND AND MYSQL_FOUND)

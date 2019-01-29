@@ -26,8 +26,6 @@
 #include <string>
 #include <iostream>
 
-#include "stdint.h"
-
 using std::string;
 using std::vector;
 using std::ostream;
